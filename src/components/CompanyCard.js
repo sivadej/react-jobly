@@ -5,6 +5,7 @@ import CardActions from '@material-ui/core/CardActions';
 import CardContent from '@material-ui/core/CardContent';
 import Button from '@material-ui/core/Button';
 import Typography from '@material-ui/core/Typography';
+import { Link } from 'react-router-dom';
 
 
 const useStyles = makeStyles({
@@ -14,7 +15,7 @@ const useStyles = makeStyles({
   }
 });
 
-const CompanyCard = ({name, description, logoUrl}) => {
+const CompanyCard = ({handle, name, description, logoUrl}) => {
   
   const classes = useStyles();
 
@@ -29,7 +30,7 @@ const CompanyCard = ({name, description, logoUrl}) => {
         </Typography>
       </CardContent>
       <CardActions>
-        <Button size="small">Learn More</Button>
+        <Button size="small"><Link to={`/companies/${handle}`}>See Jobs</Link></Button>
       </CardActions>
     </Card>
   );

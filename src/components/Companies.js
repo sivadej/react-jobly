@@ -19,7 +19,7 @@ const Companies = () => {
 
   const companiesComponents = () => {
     return(
-        data.map(c=><CompanyCard name={c.name} description={c.description} logoUrl={c.logo_url}/>)
+        data.map(c=><CompanyCard key={c.handle} handle={c.handle} name={c.name} description={c.description} logoUrl={c.logo_url}/>)
     )
   }
 
