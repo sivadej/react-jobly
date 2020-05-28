@@ -6,6 +6,7 @@ import Typography from '@material-ui/core/Typography';
 import Button from '@material-ui/core/Button';
 import IconButton from '@material-ui/core/IconButton';
 import MenuIcon from '@material-ui/icons/Menu';
+import Link from '@material-ui/core/Link';
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -30,9 +31,12 @@ const NavBar = ()=> {
             <MenuIcon />
           </IconButton>
           <Typography variant="h6" className={classes.title}>
-            Jobly
+            <Link href='/' color='inherit'>Jobly</Link>
           </Typography>
-          <Button color="inherit">Login</Button>
+          <Button color="inherit"><Link href='/companies' color='inherit'>Companies</Link></Button>
+          <Button color="inherit">Jobs</Button>
+          <Button color="inherit">Profile</Button>
+          <Button color="inherit">Logout</Button>
         </Toolbar>
       </AppBar>
     </div>

@@ -1,32 +1,17 @@
 import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import Card from '@material-ui/core/Card';
-import CardActions from '@material-ui/core/CardActions';
-import CardContent from '@material-ui/core/CardContent';
-import Button from '@material-ui/core/Button';
-import Typography from '@material-ui/core/Typography';
-
+import Jobs from './Jobs';
 
 const useStyles = makeStyles({
-  root: {
-
-  }
+  sticky: { padding: 16, position: 'sticky', top: 16 }
 });
 
-const Sidebar = ({name, description, logoUrl}) => {
-  
+const Sidebar = () => {
   const classes = useStyles();
-
   return (
-    <Card className={classes.root} variant="outlined">
-      <CardContent>
-        <Typography variant="h5" component="h2">
-          Side bar
-        </Typography>
-      </CardContent>
-      <CardActions>
-        <Button size="small">Do Something</Button>
-      </CardActions>
+    <Card className={classes.sticky} variant="outlined">
+      <Jobs />
     </Card>
   );
 };

@@ -3,7 +3,7 @@ import JoblyApi from './../JoblyApi';
 import CompanyCard from './CompanyCard';
 import Search from './Search';
 
-const Companies = () => {
+const Companies = ({updateJobState}) => {
 
   const [loading, setLoading] = useState(true);
   const [data, setData] = useState();
